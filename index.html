@@ -1,0 +1,255 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
+        <title>Site de Filmes</title>
+        <style>
+            .hi-slide{
+                position: relative;
+                width: 754px;
+                height: 292px;
+                border-radius: 50px;
+                margin: 115px auto 0;
+    
+            }
+            .hi-slide .hi-next:hover
+            .hi-slide .hi-prev:hover{
+                opacity: 1;
+                background-color: white;
+            }
+    
+            .hi-slide .hi-prev{
+                left: 59px;
+            }
+            .hi-slide .hi-prev::before{
+                content: '<';
+            }
+            .hi-slide .hi-next{
+                right: -59px;
+            }
+            .hi-slide .hi-next::before{
+                content: '>';
+            }
+            .hi-slide > ul{
+                list-style: none;
+                position: relative;
+                width: 754px;
+                height: 292px;
+                margin: 0;
+                padding: 0;
+    
+            }
+            .hi-slide > ul >li{
+                overflow: hidden;
+                position: absolute;
+                z-index: 0;
+                left: 377px;
+                top: 377px;
+                width: 0;
+                height: 0;
+                margin: 0;
+                padding: 0;
+                border: 3px solid white;
+                cursor:pointer;
+                background-color: #333;
+    
+            }
+            .hi-slide > ul > li >img{
+                width: 100%;
+                height: 100%;
+                background-position: center;
+            }
+        </style>
+    </head>
+    <body>
+        <header class="header">
+            <div class="menu-icon">
+                <a href=""><span class="material-icons">menu</span></a>
+            </div>
+            <div class="logo">Cine Vibes</div>
+            <div class="login-area">
+                <a href=""><span class="material-icons">account_circle</span></a>
+            </div>
+        </header>
+        <div id="loginModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <form class="form">
+                    <p class="title">Registro</p>
+                    <p >Faça seu cadastro agora!</p>
+                    <div class="flex">
+                        <label>
+                            Nome:</Nome:p> <input class="input" type="text" placeholder="" required="">
+                        </label>
+                        <label>
+                            Sobrenome: <input class="input" type="text" placeholder="" required="">
+                        </label>
+                    </div>
+                    <label>
+                        Data de Nascimento:<br><input class="input" type="date">
+                    </label> 
+                    <label>
+                        Sexo:<br>
+                        <input type="radio" name="sex" value="M checked">Masc.
+                        <input type="radio" name="sex" value="F">Fem.
+                        <input type="radio" name="sex" value="P">Prefiro não dizer
+                    </label>
+                    <label>
+                        Email: <input class="input" type="email" placeholder="" required="">
+                    </label>
+                        <label>
+                        Senha: <input class="input" type="password" placeholder="" required="">
+                    </label>
+                        <label>
+                        Confirme sua senha: <input class="input" type="password" placeholder="" required="">
+                    </label>
+                    <button class="submit">Confirmar</button>
+                </form>
+            </div>
+        </div>
+        <div>
+            <p class="destaque">Filmes em Destaque</p>
+        </div>
+        <div class="carrossel">
+         <div class="slide hi-slide">
+            <div class="hi-prev"></div>
+            <div class="hi-text"></div>
+            <ul>
+                <li><a href="sobrenatural.html"><img src="./img/sobrenatural.png" alt=""></a></li>
+                <li><img src="./img/todos_garotos_amei.png" alt=""></li>
+                <li><img src="./img/monster_house.png" alt=""></li>
+                <li><img src="./img/apaixonada.png" alt=""></li>
+                <li><img src="./img/sobrenatural.png" alt=""></li>
+                <li><img src="./img/vezes_confusao.png" alt=""></li>
+                <li><img src="./img/todos_garotos_amei.png" alt=""></li>
+            </ul>
+         </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+        <script src="jquery.hislide.js"></script>
+        <script>
+            $('.slide').hiSlide();  
+        </script>
+            <div>
+                    <p  class="tema"> Terror</p>
+            </div>
+        <div class="films-scroll-container">
+            <button class="scroll-btn left" onclick="scrollFilms('films-scroll', 'left')">‹</button>
+            <div class="films-scroll films-scroll">
+                <div class="film-card"><a href="a_baba.html"><img class="card" src="./img/a_baba.png"></a></div>
+                <div class="film-card"><a href="panico.html"><img class="card" src="./img/panico.png"></a></div>
+                <div class="film-card"><a href="ouija.html"><img class="card" src="./img/ouija.png"></a></div>
+                <div class="film-card"><a href="monster_house.html"><img class="card" src="./img/monster_house.png"></a></div>
+                <div class="film-card"><a href="sobrenatural.html"><img class="card" src="./img/sobrenatural.png"></a></div>
+                <div class="film-card"><a href="a_baba.html"><img class="card" src="./img/a_baba.png"></a></div>
+                <div class="film-card"><a href="panico.html"><img class="card" src="./img/panico.png"></a></div>
+                <div class="film-card"><a href="ouija.html"><img class="card" src="./img/ouija.png"></a></div>
+                <div class="film-card"><a href="monster_house.html"><img class="card" src="./img/monster_house.png"></a></div>
+                <div class="film-card"><a href="sobrenatural.html"><img class="card" src="./img/sobrenatural.png"></a></div>
+                <div class="film-card"><a href="a_baba.html"><img class="card" src="./img/a_baba.png"></a></div>
+                <div class="film-card"><a href="panico.html"><img class="card" src="./img/panico.png"></a></div>
+                <div class="film-card"><a href="ouija.html"><img class="card" src="./img/ouija.png"></a></div>
+                <div class="film-card"><a href="monster_house.html"><img class="card" src="./img/monster_house.png"></a></div>
+                <div class="film-card"><a href="sobrenatural.html"><img class="card" src="./img/sobrenatural.png"></a></div>
+            </div>
+            <button class="scroll-btn right" onclick="scrollFilms('films-scroll', 'right')">›</button>
+        </div>
+        <div>
+            <p  class="tema"> Romance</p>
+        </div>
+        <div class="films-scroll-container">
+            <button class="scroll-btn left" onclick="scrollFilms('films-scroll2', 'left')">‹</button>
+            <div class="films-scroll films-scroll2">
+                <div class="film-card"><a href="amora1vista.html"><img class="card" src="./img/amora1vista.png"></a></div>
+                <div class="film-card"><a href="barraca_beijo.html"><img class="card" src="./img/barraca_beijo.png"></a></div>
+                <div class="film-card"><a href="todos_garotos_amei.html"><img class="card" src="./img/todos_garotos_amei.png"></a></div>
+                <div class="film-card"><a href="apaixonada.html"><img class="card" src="./img/apaixonada.png"></a></div>
+                <div class="film-card"><a href="a_escolha.html"><img class="card" src="./img/a_escolha.png"></a></div>
+                <div class="film-card"><a href="amora1vista.html"><img class="card" src="./img/amora1vista.png"></a></div>
+                <div class="film-card"><a href="barraca_beijo.html"><img class="card" src="./img/barraca_beijo.png"></a></div>
+                <div class="film-card"><a href="todos_garotos_amei.html"><img class="card" src="./img/todos_garotos_amei.png"></a></div>
+                <div class="film-card"><a href="apaixonada.html"><img class="card" src="./img/apaixonada.png"></a></div>
+                <div class="film-card"><a href="a_escolha.html"><img class="card" src="./img/a_escolha.png"></a></div>
+                <div class="film-card"><a href="amora1vista.html"><img class="card" src="./img/amora1vista.png"></a></div>
+                <div class="film-card"><a href="barraca_beijo.html"><img class="card" src="./img/barraca_beijo.png"></a></div>
+                <div class="film-card"><a href="todos_garotos_amei.html"><img class="card" src="./img/todos_garotos_amei.png"></a></div>
+                <div class="film-card"><a href="apaixonada.html"><img class="card" src="./img/apaixonada.png"></a></div>
+                <div class="film-card"><a href="a_escolha.html"><img class="card" src="./img/a_escolha.png"></a></div>
+            </div>
+            <button class="scroll-btn right" onclick="scrollFilms('films-scroll2', 'right')">›</button>
+        </div>
+        <div>
+            <p class="tema"> Comédia</p>
+        </div>
+        <div class="films-scroll-container">
+            <button class="scroll-btn left" onclick="scrollFilms('films-scroll3', 'left')">‹</button>
+            <div class="films-scroll films-scroll3">
+                <div class="film-card"><a href="os_novatos.html"><img class="card" src="./img/os_novatos.png"></a></div>
+                <div class="film-card"><a href="espiao-emeio.html"><img class="card" src="./img/espiao_emeio.png"></a></div>
+                <div class="film-card"><a href="os_salafrarios.html"><img class="card" src="./img/os_salafrarios.png"></a></div>
+                <div class="film-card"><a href="6vezes_confusao.html"><img class="card" src="./img/vezes_confusao.png"></a></div>
+                <div class="film-card"><a href="cabras_da_peste.html"><img class="card" src="./img/cabras_da_peste.png"></a></div>
+                <div class="film-card"><a href="os_novatos.html"><img class="card" src="./img/os_novatos.png"></a></div>
+                <div class="film-card"><a href="espiao-emeio.html"><img class="card" src="./img/espiao_emeio.png"></a></div>
+                <div class="film-card"><a href="os_salafrarios.html"><img class="card" src="./img/os_salafrarios.png"></a></div>
+                <div class="film-card"><a href="6vezes_confusao.html"><img class="card" src="./img/vezes_confusao.png"></a></div>
+                <div class="film-card"><a href="cabras_da_peste.html"><img class="card" src="./img/cabras_da_peste.png"></a></div>
+                <div class="film-card"><a href="os_novatos.html"><img class="card" src="./img/os_novatos.png"></a></div>
+                <div class="film-card"><a href="espiao-emeio.html"><img class="card" src="./img/espiao_emeio.png"></a></div>
+                <div class="film-card"><a href="os_salafrarios.html"><img class="card" src="./img/os_salafrarios.png"></a></div>
+                <div class="film-card"><a href="6vezes_confusao.html"><img class="card" src="./img/vezes_confusao.png"></a></div>
+                <div class="film-card"><a href="cabras_da_peste.html"><img class="card" src="./img/cabras_da_peste.png"></a></div>
+            </div>
+            <button class="scroll-btn right" onclick="scrollFilms('films-scroll3', 'right')">›</button>
+        </div>
+        <div class="cont3">
+            <div>
+                <p class="p3">Encontre aqui o Cinema mais perto de você:<br></p>
+            </div>
+            <div class="cont5">
+                <div class="divshop1">
+                    <p>Shopping  Palladium</p>
+                </div>
+                <div class="divshop2">
+                    <p>Shopping Ventura</p>
+                </div>
+                <div class="divshop3">
+                    <p>Shopping Mueller</p>
+                </div>
+            </div>
+            <div class="cont4">
+                <div class="divmap">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3601.8057216824786!2d-49.29355712460889!3d-25.478161927531218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce35d8f727f11%3A0xae93aa4b9de108e0!2sUCI%20Palladium!5e0!3m2!1spt-BR!2sbr!4v1731893142523!5m2!1spt-BR!2sbr" width="400" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="divmap">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3601.785161890128!2d-49.297946824608744!3d-25.47884827753074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce35d6b15559f%3A0xa3f8189f5353ca5b!2sCinesystem%20Shopping%20Ventura!5e0!3m2!1spt-BR!2sbr!4v1731893395105!5m2!1spt-BR!2sbr" width="400" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="divmap">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d459544.42544813734!2d-49.389713277931136!3d-25.86319619051896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dcfa07126d68a7%3A0xf9ea267b0fefa8ec!2sCinema%20Cinemark!5e0!3m2!1spt-BR!2sbr!4v1731893474946!5m2!1spt-BR!2sbr" width="400" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+        <footer style="height: 70px; background-color: #292827; color: white; text-align: center; ">
+            <p class="foot">© 2024 Cine Vibes. Todos os direitos reservados <br> By:Reivisson Luiz Cordeiro e Pedro Alvez Pires</reservados></p>
+        </footer>
+        <script src="script.js"></script>
+        <script>
+           function scrollFilms(containerClass, direction) {
+                 const scrollAmount = 300;
+                 const filmsScroll = document.querySelector(`.${containerClass}`);
+    if (filmsScroll) {
+        filmsScroll.scrollBy({
+            left: direction === 'right' ? scrollAmount : -scrollAmount,
+            behavior: 'smooth',
+        });
+    } else {
+        console.error(`Container com a classe "${containerClass}" não encontrado.`);
+    }
+}
+        </script>
+    </body>
+    </html>
+</html>

@@ -1,0 +1,97 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
+    <title>Site de Filmes</title>
+</head>
+<body>
+    <header class="header">
+        <div class="menu-icon">
+            <a href="index.html"><span class="material-icons">home</span></a>
+        </div>
+        <div class="logo">Cine Vibes</div>
+        <div class="login-area">
+            <a href="marvel.html"><span class="material-icons">account_circle</span></a>
+        </div>
+    </header>
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form class="form">
+                <p class="title">Registro</p>
+                <p >Faça seu cadastro agora!</p>
+                <div class="flex">
+                    <label>
+                        Nome:</Nome:p> <input class="input" type="text" placeholder="" required="">
+                    </label>
+    
+                    <label>
+                        Sobrenome: <input class="input" type="text" placeholder="" required="">
+                    </label>
+                </div>
+                <label>
+                    Data de Nascimento:<br><input class="input" type="date">
+                </label> 
+                <label>
+                    Sexo:<br>
+                    <input type="radio" name="sex" value="M checked">Masc.
+                    <input type="radio" name="sex" value="F">Fem.
+                    <input type="radio" name="sex" value="P">Prefiro não dizer
+                </label>
+                <label>
+                    Email: <input class="input" type="email" placeholder="" required="">
+                </label>
+                    <label>
+                    Senha: <input class="input" type="password" placeholder="" required="">
+                </label>
+                    <label>
+                    Confirme sua senha: <input class="input" type="password" placeholder="" required="">
+                </label>
+                <button class="submit">Confirmar</button>
+            </form>
+        </div>
+    </div>
+    <div class="cont">
+        <div>
+            <div>
+                <img class="pagcard" src="./img/vezes_confusao.png">
+            </div>
+        </div>
+        <div>
+            <div>
+                <p class="titulo">Seis Vezes Confusão</p>
+            </div>
+            <div>
+                <img class="estrela" src="./img/1_estrela.png">
+            </div>
+            <div>
+                <p class="resenha">Allen (Marlon Wayans), um homem prestes a se tornar pai, decide investigar suas origens e descobre que faz parte de sêxtuplos. Ansioso para conhecer sua família biológica, ele embarca em uma jornada hilária para encontrar seus cinco irmãos. No entanto, cada irmão tem uma personalidade única e peculiar, o que leva a uma série de situações cômicas e inesperadas. Durante a busca, Allen aprende lições sobre família, identidade e aceitação, enquanto enfrenta desafios que só a união entre irmãos pode superar.
+                </p><br>
+            </div>
+            <div>
+                <p class="roteiro">16 de agosto de 2019 na Netflix | 1h 37min | Comédia</p><br>
+                <p class="roteiro">Direção: Michael Tiddes | Roteiro Marlon Wayans, Mike Glock</p><br>
+                <p class="roteiro">Roteiro James Vanderbilt, Guy Busick</p><br>
+                <p class="roteiro">Elenco: Marlon Wayans, Bresha Webb, Molly Shannon</p><br>
+                <p class="roteiro">Título original Sextuplets</p><br><br>
+            </div>
+            <div>
+                <p class="disp">Disponivel em:</p>
+            </div>
+            <div>
+                <a href="https://www.netflix.com/br/title/80231419"><img class="logo1" src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"></a>
+            </div>
+        </div>
+    </div>
+    <div class="cont2"><br>
+       <p class="p1">Assista aqui o Trailer:</p>
+       <div class="div-video">
+        <iframe width="900" height="500" src="https://www.youtube.com/embed/SQ1uAdkTbbE?si=V3IsP6eL2-FDVmrA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+       </div><br><br><br><br><br><br><br><br><br><br>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
